@@ -1,0 +1,101 @@
+  .button-filled {
+    padding: 0.625rem 1.25rem;
+    background-color: var(--black--800);
+    color: var(--black--0);
+    border-radius: 0.875rem;
+    border: 0;
+    margin: 0;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .button-filled:hover {
+    background-color: var(--black--900);
+    color: var(--black--0);
+    border: 0;
+    margin: 0;
+  }
+
+  .button-filled:active {
+    background-color: var(--black--800);
+    color: var(--black--0);
+    border: 0;
+    margin: 0;
+  }
+
+  .button-filled:disabled {
+    background-color: var(--black--400);
+    color: var(--black--0);
+    border: 0;
+    margin: 0;
+  }
+
+  .button-outlined {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.875rem;
+    background-color: var(--black--0);
+    color: var(--black--800);
+    border: 1px solid var(--black--600);
+    margin: 0;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .button-outlined:hover {
+    background-color: var(--black--100);
+    color: var(--black--800);
+    border: 1px solid var(--black--600);
+    margin: 0;
+  }
+
+  .button-outlined:active {
+    background-color: var(--black--0);
+    color: var(--black--800);
+    border: 1px solid var(--black--600);
+    margin: 0;
+  }
+
+  .button-outlined:disabled {
+    background-color: var(--black--0);
+    color: var(--black--400);
+    border: 1px solid var(--black--400);
+    margin: 0;
+  }
+
+  .button-text {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.875rem;
+    background-color: var(--black--0);
+    color: var(--black--800);
+    border: 0;
+    margin: 0;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .button-text:hover {
+    background-color: var(--black--100);
+    color: var(--black--900);
+    border: 0;
+    margin: 0;
+  }
+
+  .button-text:active {
+    background-color: var(--black--0);
+    color: var(--black--800);
+    border: 0;
+    margin: 0;
+  }
+
+  .button-text:disabled {
+    background-color: var(--black--0);
+    color: var(--black--400);
+    border: 0;
+    margin: 0;
+  }

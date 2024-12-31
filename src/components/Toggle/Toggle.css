@@ -1,0 +1,10 @@
+.toggleGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 0.375rem;
+    border: 1px solid var(--black--300);
+    border-radius: 1rem;
+    padding: 0.375rem;
+    margin: 0;
+    width: fit-content;
+  }
