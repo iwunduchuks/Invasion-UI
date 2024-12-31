@@ -3,7 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import sourcemaps from "rollup-plugin-sourcemaps";
 
 const packageJson = require("./package.json");
 
@@ -25,9 +24,8 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
-      sourcemaps(),
+      typescript({ tsconfig: "./tsconfig.json", sourceMap: false }),
+      postcss()
     ],
   },
   {
