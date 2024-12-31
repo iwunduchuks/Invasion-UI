@@ -1,7 +1,7 @@
 {
-  "name": "@YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME",
+  "name": "@iwunduchuks/invasion-ui",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/YOUR_REPOSITORY_NAME"
+    "registry": "https://npm.pkg.github.com/invasion-ui"
   },
   "version": "0.1.0",
   "description": "A simple template for a custom React component library",
@@ -11,7 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "YOUR_NAME",
+  "author": "Iwundu Chukwudi",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.16.0",
