@@ -1,19 +1,31 @@
 import React from "react";
+import classNames from "classnames";
+import '../../style/global.css';
 import './Toggle.css'
+import { useThemeContext } from "../../providers/ThemeProvider";
 
-export default function Toggle({children, onChange, toggleVariant}:{
+export default function Toggle(props:{
     children: any,
     onChange?: any,
-    toggleVariant?: 'toggle-dark' | 'toggle-light'
+    variant?: 'dark-filled' | 'light-filled',
+    className?: string,
 }) {
     
+    const theme = useThemeContext();
+    const defaultClassName = classNames(
+        'toggle', 
+        theme? theme: 'base'
+    )
     return (
-        <form className='toggleGroup'>
-            {React.Children.map(children, (child) => 
+        <form className= {props.className? props.className: defaultClassName}>
+            {React.Children.map(props.children, (child) => 
                 React.cloneElement(child, {
-                    variant: toggleVariant,
-                    onChange: onChange
-                    }))}
+                    variant: props.variant,
+                    onChange: props.onChange,
+                    ...props
+                    }
+                )
+            )}
         </form>
     )
 }

@@ -1,101 +1,65 @@
-  .button-filled {
+  .button {
     padding: 0.625rem 1.25rem;
-    background-color: var(--black--800);
-    color: var(--black--0);
     border-radius: 0.875rem;
-    border: 0;
     margin: 0;
     width: fit-content;
+    height: fit-content;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
   }
+  
+  .base.filled {
+    border: 0;
+    background-color: var(--black--800);
+    color: var(--black--0);
+  }
 
-  .button-filled:hover {
+  .base.filled:hover {
     background-color: var(--black--900);
-    color: var(--black--0);
-    border: 0;
-    margin: 0;
   }
 
-  .button-filled:active {
+  .base.filled:active {
     background-color: var(--black--800);
-    color: var(--black--0);
-    border: 0;
-    margin: 0;
   }
 
-  .button-filled:disabled {
+  .base.filled:disabled {
     background-color: var(--black--400);
-    color: var(--black--0);
-    border: 0;
-    margin: 0;
   }
 
-  .button-outlined {
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.875rem;
+  .base.outlined {
     background-color: var(--black--0);
     color: var(--black--800);
     border: 1px solid var(--black--600);
-    margin: 0;
-    width: fit-content;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
   }
 
-  .button-outlined:hover {
+  .base.outlined:hover {
     background-color: var(--black--100);
-    color: var(--black--800);
-    border: 1px solid var(--black--600);
-    margin: 0;
   }
 
-  .button-outlined:active {
+  .base.outlined:active {
     background-color: var(--black--0);
-    color: var(--black--800);
-    border: 1px solid var(--black--600);
-    margin: 0;
   }
 
-  .button-outlined:disabled {
-    background-color: var(--black--0);
-    color: var(--black--400);
+  .base.outlined:disabled {
     border: 1px solid var(--black--400);
-    margin: 0;
-  }
-
-  .button-text {
-    padding: 0.625rem 1.25rem;
-    border-radius: 0.875rem;
-    background-color: var(--black--0);
-    color: var(--black--800);
-    border: 0;
-    margin: 0;
-    width: fit-content;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-  }
-
-  .button-text:hover {
-    background-color: var(--black--100);
-    color: var(--black--900);
-    border: 0;
-    margin: 0;
-  }
-
-  .button-text:active {
-    background-color: var(--black--0);
-    color: var(--black--800);
-    border: 0;
-    margin: 0;
-  }
-
-  .button-text:disabled {
-    background-color: var(--black--0);
     color: var(--black--400);
+  }
+
+  .base.text {
+    background-color: var(--black--0);
+    color: var(--black--800);
     border: 0;
-    margin: 0;
+  }
+
+  .base.text:hover {
+    background-color: var(--black--100);
+  }
+
+  .base.text:active {
+    background-color: var(--black--0);
+  }
+
+  .base.text:disabled {
+    color: var(--black--400);
   }

@@ -1,10 +1,10 @@
 import Toggle from "./Toggle";
-import ToggleItems from "../ToggleItems";
+import { ToggleItems } from "../ToggleItems";
 import React from "react";
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta = {
-    title: 'Toggle',
+    title: 'Components/Toggle',
     component: Toggle,
     args: {
       // Default props for Toggle

@@ -1,0 +1,19 @@
+.section.base {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--black--0);
+}
+
+.gap-48px {
+    gap: 48px
+}
+
+.gap-24px {
+    gap: 24px
+}
+
+.gap-12px {
+    gap: 12px
+}

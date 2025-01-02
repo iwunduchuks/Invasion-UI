@@ -1,0 +1,37 @@
+.section-items.base {
+    display: grid;
+    width: 100%;
+    height: fit-content;;
+}
+
+.full {
+    grid-template-columns: 1fr;
+}
+
+.major-minor {
+    grid-template-columns: 3fr 1fr;
+}
+
+.minor-major {
+    grid-template-columns: 1fr 3fr;
+}
+
+.half-half {
+    grid-template-columns: 1fr 1fr;
+}
+
+.minor4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.half-minor2 {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.minor2-half {
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.minor-half-minor {
+    grid-template-columns: 1fr 2fr 1fr;
+}

@@ -2,64 +2,55 @@
     display: none;
   }
 
-  .toggle-dark {
+  .toggle-items {
     padding: 0.25rem 0.5rem;
     border-radius: 0.625rem;
-    background-color: var(--black--0);
-    border: 1px solid var(--black--0);
-    color: var(--black--800);
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    height: fit-content;
+    width: fit-content;
   }
 
-  .toggle-dark:hover {
-    background-color: var(--black--100);
-    border: 1px solid var(--black--100);
+  .base.dark-filled {
+    background-color: var(--black--0);
+    border: 1px solid var(--black--0);
     color: var(--black--800);
   }
 
-  input[type="radio"]:checked + .toggle-dark {
+  .base.dark-filled:hover {
+    background-color: var(--black--100);
+    border: 1px solid var(--black--100);
+  }
+
+  input[type="radio"]:checked + .base.dark-filled {
     background-color: var(--black--800);
     border: 1px solid var(--black--800);
     color: var(--black--0);
   }
 
-  input[type="radio"]:checked + .toggle-dark:hover {
+  input[type="radio"]:checked + .base.dark-filled:hover {
     background-color: var(--black--900);
   }
 
-  input[type="radio"]:checked + .toggle-dark:focus {
-    background-color: var(--black--900);
-  }
+  /* -------------------------------------------------------- */
 
-  .toggle-light {
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.625rem;
+  .base.light-filled {
     border: 1px solid var(--black--0);
     background-color: var(--black--0);
     color: var(--black--800);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
   }
 
-  .toggle-light:hover {
+  .base.light-filled:hover {
     border: 1px solid var(--black--100);
     background-color: var(--black--100);
-    color: var(--black--800);
   }
 
-  input[type="radio"]:checked + .toggle-light {
+  input[type="radio"]:checked + .base.light-filled {
     border-color: var(--black--300);
     background-color: var(--black--200);
-    color: var(--black--800);
   }
 
-  input[type="radio"]:checked + .toggle-light:hover {
-    background-color: var(--black--300);
-  }
-
-  input[type="radio"]:checked + .toggle-light:focus {
+  input[type="radio"]:checked + .base.light-filled:hover {
     background-color: var(--black--300);
   }
