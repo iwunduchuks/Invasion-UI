@@ -9,6 +9,8 @@ export default function Toggle(props:{
     onChange?: any,
     variant?: 'dark-filled' | 'light-filled',
     className?: string,
+    id?: string,
+    style?: object
 }) {
     
     const theme = useThemeContext();
@@ -17,7 +19,11 @@ export default function Toggle(props:{
         theme? theme: 'base'
     )
     return (
-        <form className= {props.className? props.className: defaultClassName}>
+        <form 
+            className= {props.className? props.className: defaultClassName}
+            id={props.id}
+            style={props.style}
+        >
             {React.Children.map(props.children, (child) => 
                 React.cloneElement(child, {
                     variant: props.variant,

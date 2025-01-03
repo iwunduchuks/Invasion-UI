@@ -1,30 +1,29 @@
 import React from "react";
-import '../../style/global.css';
-import './Section.css'
 import classNames from "classnames";
+import '../../style/global.css';
 import { useThemeContext } from "../../providers/ThemeProvider";
+import './AppBar.css'
 
-export default function Section(props:{
+export default function AppBar(props: {
     children: React.ReactNode,
-    gap: '48px' | '24px' | '12px' | string,
     className?: string,
+    id?: string,
     style?: object,
-    id?: string
 }) {
-    
+
     const theme = useThemeContext();
     const defaultClassName = classNames(
-        'section', 
+        'appbar', 
         theme? theme: 'base'
-    );
+    )
     return (
         <div 
-        className= {props.className? props.className: defaultClassName} 
-        id={props.id} 
-        style= {{gap: props.gap, ...props.style}}
+        className={props.className? props.className: defaultClassName}
+        id= {props.id}
+        style= {props.style}
         {...props}
         >
-            {props.children}
+        {props.children}
         </div>
     )
 }

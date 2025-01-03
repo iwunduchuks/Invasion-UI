@@ -1,0 +1,10 @@
+.appbar.base {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    border-bottom: 1px solid var(--black--500);
+    gap: 2rem;
+}

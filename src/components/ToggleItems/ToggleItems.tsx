@@ -13,6 +13,8 @@ export default function ToggleItems(props: {
     defaultChecked?: boolean,
     onChange?: (e: any) => void,
     className?: string,
+    id?: string,
+    style?: object
 }) {
 
 
@@ -33,6 +35,8 @@ export default function ToggleItems(props: {
         onChange={props.onChange}/>
         <div
         className={props.className? props.className: defaultClassName}
+        id={props.id}
+        style={props.style}
         {...props}
         >{props.value}
         </div>

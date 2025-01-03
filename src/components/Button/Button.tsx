@@ -10,6 +10,8 @@ export default function Button(props: {
     disabled?: boolean,
     onClick?: () => void,
     className?: string,
+    id?: string,
+    style?: object
 }) {
 
     const theme = useThemeContext()
@@ -23,6 +25,8 @@ export default function Button(props: {
         className={props.className? props.className: defaultClassName} 
         onClick={props.onClick} 
         disabled= {props.disabled && props.disabled}
+        id={props.id}
+        style={props.style}
         {...props}
         >
           {props.name} 

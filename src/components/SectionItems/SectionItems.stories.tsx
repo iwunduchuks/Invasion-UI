@@ -16,7 +16,7 @@ type Story = StoryObj;
 
 export const Layouts: Story = {
     render: (args) => (
-        <Section gap="gap-48px">
+        <Section gap="48px">
             <SectionItems gap="24px" layout="full" {...args}>
                 <div style={{border: '1px solid black', borderRadius: '24px', padding: '12px'}}>
                     Full
@@ -60,7 +60,7 @@ export const Layouts: Story = {
                     Minor
                 </div>
             </SectionItems>
-            <SectionItems gap="0" layout='half-minor2' {...args}>
+            <SectionItems gap="24px" layout='half-minor2' {...args}>
                 <div style={{border: '1px solid black', borderRadius: '24px', padding: '12px'}}>
                     Half
                 </div>
