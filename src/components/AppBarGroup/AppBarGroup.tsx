@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import '../../style/global.css';
 import { useThemeContext } from "../../providers/ThemeProvider";
-import './AppBarGroup.css'
+import Styles from './AppBarGroup.module.css'
 
 export default function AppBarGroup(props: {
     children: React.ReactNode,
@@ -10,18 +10,19 @@ export default function AppBarGroup(props: {
     alignItems?: 'start' | 'center' | 'end' | string,
     justifyContent?: 'start' | 'center' | 'end' | string,
     gap?: '32px' | '16px' | string
-    className?: string,
+    ClassName?: string,
     id?: string,
     style?: object,
 }) {
 
     const theme = useThemeContext();
     const defaultClassName = classNames(
-        'appbar-group'
+        Styles.appbargroup,
+        props.ClassName && props.ClassName
     )
     return (
         <div 
-        className={props.className? props.className: defaultClassName}
+        className={defaultClassName}
         id= {props.id}
         style= {{
             alignSelf: props.alignSelf? props.alignSelf: 'center',

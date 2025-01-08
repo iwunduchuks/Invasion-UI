@@ -1,26 +1,27 @@
 import React from "react";
 import classNames from "classnames";
 import '../../style/global.css';
-import './Toggle.css'
+import Style from './Toggle.module.css'
 import { useThemeContext } from "../../providers/ThemeProvider";
 
 export default function Toggle(props:{
     children: any,
     onChange?: any,
     variant?: 'dark-filled' | 'light-filled',
-    className?: string,
+    ClassName?: string,
     id?: string,
     style?: object
 }) {
     
     const theme = useThemeContext();
     const defaultClassName = classNames(
-        'toggle', 
-        theme? theme: 'base'
+        Style.toggle, 
+        theme? theme: Style.base,
+        props.ClassName && props.ClassName
     )
     return (
         <form 
-            className= {props.className? props.className: defaultClassName}
+            className= {defaultClassName}
             id={props.id}
             style={props.style}
         >

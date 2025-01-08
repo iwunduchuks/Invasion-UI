@@ -1,6 +1,6 @@
 import React from "react";
 import '../../style/global.css';
-import './SectionItems.css'
+import Style from './SectionItems.module.css'
 import classNames from "classnames";
 import { useThemeContext } from "../../providers/ThemeProvider";
 
@@ -16,19 +16,20 @@ export default function SectionItems(props:{
             'minor-half-minor',
     gap?: '48px' | '24px' | '12px' | string,
     style?: object,
-    className?: string,
+    ClassName?: string,
     id?: string
 }) {
     
     const theme = useThemeContext();
     const defaultClassName = classNames(
-        'section-items', 
-        theme? theme: 'base',
-        props.layout
+        Style['section-items'], 
+        theme? theme: Style['base'],
+        Style[props.layout],
+        props.ClassName && props.ClassName
     );
     return (
         <div 
-        className= {props.className? props.className: defaultClassName} 
+        className= {defaultClassName} 
         id={props.id}
         style={{gap: props.gap? props.gap: '24px', ...props.style}}
         {...props}

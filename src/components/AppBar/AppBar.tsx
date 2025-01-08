@@ -2,23 +2,24 @@ import React from "react";
 import classNames from "classnames";
 import '../../style/global.css';
 import { useThemeContext } from "../../providers/ThemeProvider";
-import './AppBar.css'
+import appBarStyle from './AppBar.module.css';
 
 export default function AppBar(props: {
     children: React.ReactNode,
-    className?: string,
+    ClassName?: string,
     id?: string,
     style?: object,
 }) {
 
     const theme = useThemeContext();
     const defaultClassName = classNames(
-        'appbar', 
-        theme? theme: 'base'
+        appBarStyle.appbar, 
+        theme? theme: appBarStyle.base,
+        props.ClassName && props.ClassName
     )
     return (
         <div 
-        className={props.className? props.className: defaultClassName}
+        className={defaultClassName}
         id= {props.id}
         style= {props.style}
         {...props}

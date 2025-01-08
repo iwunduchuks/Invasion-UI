@@ -1,4 +1,4 @@
-import './ToggleItems.css'
+import Style from './ToggleItems.module.css'
 import '../../style/global.css';
 import React from "react";
 import classNames from 'classnames';
@@ -12,7 +12,7 @@ export default function ToggleItems(props: {
     variant?: 'dark-filled' | 'light-filled',
     defaultChecked?: boolean,
     onChange?: (e: any) => void,
-    className?: string,
+    ClassName?: string,
     id?: string,
     style?: object
 }) {
@@ -20,9 +20,10 @@ export default function ToggleItems(props: {
 
     const theme = useThemeContext(); // from context API
     const defaultClassName = classNames(
-        'toggle-items', 
-        theme? theme:'base', 
-        props.variant? props.variant: 'dark-filled'
+        Style['toggle-items'], 
+        theme? theme: Style['base'], 
+        props.variant? Style[props.variant]: Style['dark-filled'],
+        props.ClassName && props.ClassName
     )
 
     return (
@@ -34,7 +35,7 @@ export default function ToggleItems(props: {
         defaultChecked= {props.defaultChecked && props.defaultChecked}
         onChange={props.onChange}/>
         <div
-        className={props.className? props.className: defaultClassName}
+        className={defaultClassName}
         id={props.id}
         style={props.style}
         {...props}

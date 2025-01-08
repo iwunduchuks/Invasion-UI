@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import './Button.css';
+import Styles from './Button.module.css';
 import '../../style/global.css';
 import { useThemeContext } from "../../providers/ThemeProvider";
 
@@ -9,20 +9,23 @@ export default function Button(props: {
     variant?: 'filled' | 'outlined' | 'text',
     disabled?: boolean,
     onClick?: () => void,
-    className?: string,
+    ClassName?: string,
     id?: string,
     style?: object
 }) {
 
     const theme = useThemeContext()
     const defaultClassName = classNames(
-        'button', 
-        theme? theme: 'base', 
-        props.variant? props.variant:'filled'
+        Styles.button, 
+        theme? theme: Styles.base, 
+        props.variant? Styles[props.variant]: Styles.filled,
+        props.ClassName && props.ClassName
     )
+
+    console.log(defaultClassName)
     return (
         <button 
-        className={props.className? props.className: defaultClassName} 
+        className={defaultClassName} 
         onClick={props.onClick} 
         disabled= {props.disabled && props.disabled}
         id={props.id}
