@@ -6,7 +6,7 @@ import { useThemeContext } from "../../providers/ThemeProvider";
 
 export default function Section(props:{
     children: React.ReactNode,
-    gap: '48px' | '24px' | '12px' | string,
+    gap?: '48px' | '24px' | '12px' | string,
     ClassName?: string,
     style?: object,
     id?: string
@@ -22,7 +22,7 @@ export default function Section(props:{
         <div 
         className= {defaultClassName} 
         id={props.id} 
-        style= {{gap: props.gap, ...props.style}}
+        style= {{gap: props.gap? props.gap: '24px', ...props.style}}
         {...props}
         >
             {props.children}
