@@ -21,11 +21,13 @@ const option = [
     'Chisom',
     'Noble'
 ]
+
 export const SelectDefault: Story = {
+
     render: (args) => (
         <Section>
             <SectionItems layout='minor-major' gap='60px'>
-                <Select options={option} {...args}/>
+                <Select placeholder='Favourite Child' options={option} {...args}/>
             </SectionItems>
         </Section>
 

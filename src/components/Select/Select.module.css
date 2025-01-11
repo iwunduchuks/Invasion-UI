@@ -57,7 +57,7 @@ input[type="text"] {
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
   height: fit-content;
-  max-height: 7rem;
+  max-height: 10rem;
   overflow: auto;
   position: absolute;
   top: 90%;

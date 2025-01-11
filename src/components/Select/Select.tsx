@@ -7,7 +7,9 @@ import {capitalCase} from 'change-case'
 
 
 export default function Select (props: {
-    options: Array<string>
+    options: Array<string>,
+    placeholder: string,
+    onChange?: any
 }) {
     const [dropdownActive, setDropdownActive] = useState(false);
     const handleFocus = () => {
@@ -38,7 +40,6 @@ export default function Select (props: {
 
         if (textInput && !filteredOptions.length) {
             setNoFilterFound(true)
-            console.log('no option found')
         }
         else {
             setNoFilterFound(false)
@@ -85,12 +86,14 @@ export default function Select (props: {
 
     const listReference = useRef<HTMLLIElement>(null);
 
+    useEffect(() => props.onChange(selected))
+
     return (
         <div className={Style.dropdown}>
             <label className={Style.dropdownface}>
             <input 
             type="text"
-            placeholder="Select"
+            placeholder={props.placeholder}
             value={selected? selected: ''}
             onChange={handleTextChange}
             onFocus={handleFocus}

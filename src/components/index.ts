@@ -6,3 +6,4 @@ export { ToggleItems } from './ToggleItems';
 export { AppBar } from './AppBar';
 export { AppBarGroup } from './AppBarGroup';
 export { Logo } from './Logo';
+export { Select } from './Select';
