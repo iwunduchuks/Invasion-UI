@@ -1,0 +1,33 @@
+.dropdown {
+    position: relative;
+}
+
+#text {
+    position: relative;
+    padding-right: 2.625rem;
+}
+    #text:focus ~ .menu {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.menu {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 47%;
+    right: 1.50875rem;
+    border-bottom: 2px solid var(--black--500);
+    border-right: 2px solid var(--black--500);
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(45deg) translateY(-50%);
+    transform-origin: right;
+    background-color: white;
+  }
+

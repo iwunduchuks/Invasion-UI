@@ -7,3 +7,5 @@ export { AppBar } from './AppBar';
 export { AppBarGroup } from './AppBarGroup';
 export { Logo } from './Logo';
 export { Select } from './Select';
+export { Menu } from './Menu';
+export { TextInput } from './TextInput';

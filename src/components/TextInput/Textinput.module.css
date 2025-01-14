@@ -1,0 +1,17 @@
+input[type="text"] {
+    box-sizing: border-box;
+    width: 100%; 
+    min-width: 5rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--black--500);
+    border-radius: 0.875rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: var(--black--900);
+    outline: none
+    }
+  
+    input[type="text"]:focus {
+      outline: 1.5px solid var(--black--700); /* Change border color when focused */
+      }

@@ -29,3 +29,9 @@ npm run storybook
 ``` bash
 npm run build-storybook
 ```
+
+## To install library for use
+
+``` bash
+npm install @iwunduchuks/invasion-ui
+```
